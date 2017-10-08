@@ -44,6 +44,36 @@ src/title.c
 src/topwin.c
 src/widget.c
 src/window.c
+widgets/button.c
+widgets/caret.c
+widgets/checkbox.c
+widgets/combobox.c
+widgets/digfont.c
+widgets/digtube.c
+widgets/edit.c
+widgets/filelist_view.c
+widgets/groupbox.c
+widgets/iconbox.c
+widgets/label.c
+widgets/list_view.c
+widgets/listbox.c
+widgets/listctrl.c
+widgets/menu.c
+widgets/mv_view.c
+widgets/plot.c
+widgets/plot_curve.c
+widgets/progressbar.c
+widgets/radiobox.c
+widgets/scrollbar.c
+widgets/slider.c
+widgets/staticline.c
+widgets/textbox.c
+widgets/textview.c
+widgets/panel.c
+widgets/notebook.c
+src/rtgui_theme.c
+src/rtgui_mv_model.c
+src/rtgui_xml.c
 ''')
 CPPPATH = [cwd + '/include']
 

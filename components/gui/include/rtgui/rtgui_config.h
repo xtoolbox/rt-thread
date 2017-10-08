@@ -59,7 +59,7 @@
 
 //#define RTGUI_USING_CALIBRATION
 
-#define RTGUI_USING_VFRAMEBUFFER
+//#define RTGUI_USING_VFRAMEBUFFER
 
 #ifdef DEBUG_MEMLEAK
 #define rtgui_malloc     rt_malloc
