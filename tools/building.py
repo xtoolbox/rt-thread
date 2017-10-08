@@ -238,7 +238,8 @@ def PrepareBuilding(env, root_directory, has_libcpu=False, remove_components = [
                 'vs':('msvc', 'cl'),
                 'vs2012':('msvc', 'cl'),
                 'cb':('keil', 'armcc'),
-                'ua':('gcc', 'gcc')}
+                'ua':('gcc', 'gcc'),
+                'qt':('gcc', 'gcc'),}
     tgt_name = GetOption('target')
     if tgt_name:
         # --target will change the toolchain settings which clang-analyzer is
@@ -673,7 +674,11 @@ def EndBuilding(target, program = None):
     if GetOption('target') == 'vs2012':
         from vs2012 import VS2012Project
         VS2012Project('project.vcxproj', Projects, program)
-
+        
+    if GetOption('target') == 'qt':
+        from qt import QtProject
+        QtProject('project.pro', Projects, program)
+        
     if GetOption('target') == 'cb':
         from codeblocks import CBProject
         CBProject('project.cbp', Projects, program)
